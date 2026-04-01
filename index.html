@@ -5,7 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>GameVault</title>
     <script src="https://cdn.tailwindcss.com"></script>
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <style>
+        .bg-custom-purple { background-color: #A799F2; }
+        .bg-custom-blue { background-color: #2421D1; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+    </style>
 </head>
 <body class="bg-white min-h-screen pb-24">
     <h1 class="px-2 py-1 text-purple-400 font-black ">GameStore</h1>
@@ -16,12 +20,11 @@
         </div>
     </section>
     <section>
-        <div id="filters" class="flex gap-4 px-6 overflow-x-auto no-scrollbar pb-4 pt-15">
-            <button>All</button>
-            <button>Action</button>
-            <button>RPG</button>
-            <button>FPS</button>
-
+         <div class="flex gap-4 mb-12 overflow-x-auto no-scrollbar sm:justify-center mt-20">
+            <button class="shrink-0 bg-custom-blue text-white px-10 py-2 rounded-2xl font-bold shadow-md uppercase">ALL</button>
+            <button class="shrink-0 bg-custom-purple bg-opacity-70 text-white px-10 py-2 rounded-2xl font-bold uppercase">Action</button>
+            <button class="shrink-0 bg-custom-purple bg-opacity-70 text-white px-10 py-2 rounded-2xl font-bold uppercase">RPG</button>
+            <button class="shrink-0 bg-custom-purple bg-opacity-70 text-white px-10 py-2 rounded-2xl font-bold uppercase">FPS</button>
         </div>
     </section>
     
