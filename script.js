@@ -42,8 +42,35 @@ const games = [
         "genre": "Aventure"
     }
 ];
-const gameContainer - document.getElementById('game-container');
+const gameContainer = document.getElementById('game-container');
 
-function displayGames(gamesToShow){
-    gameContainer.innerHtml = "";
+
+function displayGames(gamesToShow) {
+    
+    gameContainer.innerHTML = "";
+
+   
+    gamesToShow.forEach(game => {
+        const card = `
+            <div class="bg-custom-purple rounded-[2.5rem] overflow-hidden shadow-xl text-white transform hover:scale-105 transition-all duration-300 flex flex-col">
+                <img src="${game.image}" class="w-full h-44 object-cover border-b border-white/10" alt="${game.titre}">
+                <div class="p-6 flex-grow flex flex-col justify-between">
+                    <div>
+                        <h3 class="text-xl font-black italic uppercase leading-tight">${game.titre}</h3>
+                        <p class="text-xs font-semibold opacity-80">${game.genre}</p>
+                    </div>
+                    <div class="flex justify-between items-center mt-4">
+                        <span class="text-2xl font-bold">$${game.prix}</span>
+                        <button class="bg-custom-blue px-4 py-2 rounded-full text-[10px] font-black uppercase shadow-md active:scale-90 transition">
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+            </div>
+        `;
+        gameContainer.innerHTML += card;
+    });
 }
+
+
+displayGames(games);
