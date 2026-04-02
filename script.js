@@ -55,6 +55,7 @@ const games = [
         description: "Explorez les Ã©toiles et dÃ©couvrez le plus grand mystÃ¨re de l'humanitÃ© dans ce RPG spatial."
     }
 ];
+let cart = [];
 
 const gameContainer = document.getElementById('game-container');
 
