@@ -117,3 +117,6 @@ categoryButtons.forEach(btn =>{
         btn.classList.replace('bg-custom-purple','bg-custom-blue');
     });
 });
+function addToCart(gameId){
+    const gameToAdd = games.find(g =>g.id ===gameId);
+}
