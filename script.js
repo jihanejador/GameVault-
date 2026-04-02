@@ -70,7 +70,7 @@ function displayGames(gamesToShow) {
                 <img src="${game.image}" class="w-full h-44 object-cover border-b border-white/10" alt="${game.titre}">
                 <div class="p-6 flex-grow flex flex-col justify-between">
                     <div>
-                        <h3 class="text-xl font-black italic uppercase leading-tight">${game.titre}</h3>
+                        <h3 class="text-xl font-black italic uppercase leading-tight">${game.title}</h3>
                         <p class="text-xs font-semibold opacity-80">${game.category}</p>
                     </div>
                     <div class="flex justify-between items-center mt-4">
@@ -88,3 +88,13 @@ function displayGames(gamesToShow) {
 
 
 displayGames(games);
+const searchInput = document.getElementById('searchInput');
+
+searchInput.addEventListener('input',(e)=>{
+    const searchTerms = e.target.value.toLowerCase();
+
+    const filteredGames = games.filter(game =>
+        game.title.toLocaleLowerCase().includes(searchTerms)
+    );
+    displayGames(filteredGames);
+});
