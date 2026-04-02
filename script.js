@@ -98,3 +98,21 @@ searchInput.addEventListener('input',(e)=>{
     );
     displayGames(filteredGames);
 });
+const categoryButtons = document.querySelectorAll('.category-btn');
+
+categoryButtons.forEach(btn =>{
+    btn.addEventListener('click',()=>{
+        const selectedCategory = btn.getAttribute('data-category');
+
+        let filtered;
+        if(selectedCategory ==='all'){
+            filtered=games;
+        } else{
+            filtered = games.filter(game => game.category === selectedCategory);
+        }
+        displayGames(filtered);
+
+        categoryButtons.forEach(b => b.classList.replace('bg-custom-blue','bg-custom-purple'));
+        btn.classList.replace('bg-custom-purple','bg-custom-blue');
+    });
+});
