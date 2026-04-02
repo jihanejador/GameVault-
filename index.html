@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="fr">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GameVault</title>
+    <title>GameStore Responsive</title>
     <script src="https://cdn.tailwindcss.com"></script>
     <style>
         .bg-custom-purple { background-color: #A799F2; }
@@ -11,25 +11,96 @@
         .no-scrollbar::-webkit-scrollbar { display: none; }
     </style>
 </head>
-<body class="bg-white min-h-screen pb-24">
-    <h1 class="px-2 py-1 text-purple-400 font-black ">GameStore</h1>
-    <section>
-        <div id="search" class="pt-19">
-            <input type="text" id="searchinput" placeholder="Search...."  class="w-full custom-purple text-white placeholder-indigo-100 bg-purple-600 rounded-2xl py-4 px-6 outline-none shadow-lg">
-           
+<body class="bg-gray-50 min-h-screen font-sans pb-10">
+
+    <div class="max-w-6xl mx-auto px-4 md:px-8">
+        
+        <header class="flex justify-between items-center py-8">
+            <h1 class="text-blue-700 font-black text-3xl tracking-tighter">
+                Game<span class="text-blue-300 font-normal">Store</span>
+            </h1>
+            <button class="text-indigo-200 hover:text-indigo-400 transition">
+                <svg class="w-12 h-12" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M7 18c-1.1 0-1.99.9-1.99 2S5.9 22 7 22s2-.9 2-2-.9-2-2-2zM1 2v2h2l3.6 7.59-1.35 2.45c-.16.28-.25.61-.25.96 0 1.1.9 2 2 2h12v-2H7.42c-.14 0-.25-.11-.25-.25l.03-.12.9-1.63h7.45c.75 0 1.41-.41 1.75-1.03l3.58-6.49c.08-.14.12-.31.12-.48 0-.55-.45-1-1-1H5.21l-.94-2H1zm16 16c-1.1 0-1.99.9-1.99 2s.89 2 1.99 2 2-.9 2-2-.9-2-2-2z"/>
+                </svg>
+            </button>
+        </header>
+
+        <div class="relative mb-10 max-w-xl mx-auto">
+            <input type="text" placeholder="search......." 
+                class="w-full bg-custom-purple rounded-2xl py-4 px-8 text-white placeholder-indigo-100 outline-none shadow-lg text-lg">
+            
         </div>
-    </section>
-    <section>
-         <div class="flex gap-4 mb-12 overflow-x-auto no-scrollbar sm:justify-center mt-20">
+
+        <div class="flex gap-4 mb-12 overflow-x-auto no-scrollbar sm:justify-center">
             <button class="shrink-0 bg-custom-blue text-white px-10 py-2 rounded-2xl font-bold shadow-md uppercase">ALL</button>
             <button class="shrink-0 bg-custom-purple bg-opacity-70 text-white px-10 py-2 rounded-2xl font-bold uppercase">Action</button>
             <button class="shrink-0 bg-custom-purple bg-opacity-70 text-white px-10 py-2 rounded-2xl font-bold uppercase">RPG</button>
             <button class="shrink-0 bg-custom-purple bg-opacity-70 text-white px-10 py-2 rounded-2xl font-bold uppercase">FPS</button>
         </div>
-    </section>
-    
+
+        <main class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
+            
+            <div class="bg-custom-purple rounded-[2.5rem] overflow-hidden shadow-xl text-white transform hover:scale-105 transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1589241062272-c0a000072dfa?w=600" class="w-full h-44 object-cover border-b border-white/10">
+                <div class="p-6">
+                    <h3 class="text-xl font-black italic uppercase">GTA V</h3>
+                    <p class="text-xs font-semibold opacity-80">Action</p>
+                    <div class="flex justify-between items-center mt-2">
+                        <span class="text-2xl font-bold">$50</span>
+                        <button class="bg-custom-blue px-4 py-2 rounded-full text-[10px] font-black uppercase shadow-md active:scale-90">
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-custom-purple rounded-[2.5rem] overflow-hidden shadow-xl text-white transform hover:scale-105 transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1605898393055-3882798e1f0e?w=600" class="w-full h-44 object-cover border-b border-white/10">
+                <div class="p-6">
+                    <h3 class="text-xl font-black italic uppercase">ROBLOX</h3>
+                    <p class="text-xs font-semibold opacity-80">Funny</p>
+                    <div class="flex justify-between items-center mt-2">
+                        <span class="text-2xl font-bold">$30</span>
+                        <button class="bg-custom-blue px-4 py-2 rounded-full text-[10px] font-black uppercase shadow-md active:scale-90">
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-custom-purple rounded-[2.5rem] overflow-hidden shadow-xl text-white transform hover:scale-105 transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1542751371-adc38448a05e?w=600" class="w-full h-44 object-cover border-b border-white/10">
+                <div class="p-6">
+                    <h3 class="text-xl font-black italic uppercase">Cyberpunk</h3>
+                    <p class="text-xs font-semibold opacity-80">RPG</p>
+                    <div class="flex justify-between items-center mt-2">
+                        <span class="text-2xl font-bold">$60</span>
+                        <button class="bg-custom-blue px-4 py-2 rounded-full text-[10px] font-black uppercase shadow-md active:scale-90">
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-custom-purple rounded-[2.5rem] overflow-hidden shadow-xl text-white transform hover:scale-105 transition-all duration-300">
+                <img src="https://images.unsplash.com/photo-1552820728-8b83bb6b773f?w=600" class="w-full h-44 object-cover border-b border-white/10">
+                <div class="p-6">
+                    <h3 class="text-xl font-black italic uppercase">Valorant</h3>
+                    <p class="text-xs font-semibold opacity-80">FPS</p>
+                    <div class="flex justify-between items-center mt-2">
+                        <span class="text-2xl font-bold">$0</span>
+                        <button class="bg-custom-blue px-4 py-2 rounded-full text-[10px] font-black uppercase shadow-md active:scale-90">
+                            Ajouter au panier
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </main>
+    </div>
 
     
-    
+
 </body>
 </html>
