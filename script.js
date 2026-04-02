@@ -119,4 +119,5 @@ categoryButtons.forEach(btn =>{
 });
 function addToCart(gameId){
     const gameToAdd = games.find(g =>g.id ===gameId);
+    cart.push(gameToAdd);
 }
