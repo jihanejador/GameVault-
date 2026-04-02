@@ -42,3 +42,8 @@ const games = [
         "genre": "Aventure"
     }
 ];
+const gameContainer - document.getElementById('game-container');
+
+function displayGames(gamesToShow){
+    gameContainer.innerHtml = "";
+}
