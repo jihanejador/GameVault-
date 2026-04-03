@@ -126,9 +126,15 @@ cartBtn.addEventListener('click',() => cartPage.classList.remove('hidden'));
 closeCart.addEventListener('click', () => cartPage.classList.add('hidden'));
 
 function addToCart(gameId){
-    const gameToAdd = games.find(g =>g.id ===gameId);
-    cart.push(gameToAdd);
-    alert(`${gameToAdd.title} a ete ajouter au panier !`);
+    const game = games.find(g =>g.id ===gameId);
+    const existingItem = cart.find(item =>item.id ===gameId);
+    if(existingItem){
+        existingItem.qty +=1;
+    }else{
+        cart.push({...game, qty:1});
+    }
+    renderCart();
+    alert(`${gameToAdd.title} Ajoute au panier `);
 
-    updateCartUI();
+    
 }
