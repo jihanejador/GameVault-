@@ -121,6 +121,10 @@ categoryButtons.forEach(btn =>{
         btn.classList.replace('bg-custom-purple','bg-custom-blue');
     });
 });
+
+cartBtn.addEventListener('click',() => cartPage.classList.remove('hidden'));
+closeCart.addEventListener('click', () => cartPage.classList.add('hidden'));
+
 function addToCart(gameId){
     const gameToAdd = games.find(g =>g.id ===gameId);
     cart.push(gameToAdd);
