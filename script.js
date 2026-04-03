@@ -76,7 +76,7 @@ function displayGames(gamesToShow) {
                     </div>
                     <div class="flex justify-between items-center mt-4">
                         <span class="text-2xl font-bold">$${game.price}</span>
-                        <button pnclick="addToCart(${game.id})" class="bg-custom-blue px-4 py-2 rounded-full text-[10px] font-black uppercase shadow-md active:scale-90 transition">
+                        <button onclick="addToCart(${game.id})" class="bg-custom-blue px-4 py-2 rounded-full text-[10px] font-black uppercase shadow-md active:scale-90 transition">
                             Ajouter au panier
                         </button>
                     </div>

@@ -63,6 +63,17 @@
 
         <main id="game-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10">
         </main>
+        <div id="cart-page" class="hidden fixed inset-0 bg-white z-50 p-8 overflow-y-auto">
+            <div class="max-w-2xl mx-auto">
+                <button id="closeCart" class="text-3xl mb-6 font-bold">&larr;</button>
+                <h2 class="text-3xl font-black nb-8"">Votre Panier</h2>
+                <div id="cart-items" class="space-y-6"></div>
+                <div class="mt-10 border-t pt-6">
+                    <h3 class="text-2xl font-bold">Total : $<span id="total-price">0.00</span></h3>
+                    <button class="w-full mt-4 bg-costom-blue text-white py-4 rounded-2xl font-bold">Commander</button>
+                </div>
+            </div>
+        </div>
 
 
     </div>
