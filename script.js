@@ -176,3 +176,7 @@ function updateQty(id,change){
     }
     renderCart();
 }
+function saveCart(){
+    localStorage.setItem('gameCart', JSON.stringify(cart));
+    
+}
