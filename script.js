@@ -122,5 +122,5 @@ function addToCart(gameId){
     cart.push(gameToAdd);
     alert(`${gameToAdd.title} a ete ajouter au panier !`);
 
-    
+    updateCartUI();
 }
