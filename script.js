@@ -189,4 +189,9 @@ function loadCart(){
         renderCart();
     }
 }
+function removeFromCart(id){
+    cart = cart.filter(item => item.id !==id);
+    renderCart();
+    saveCart();
+}
 loadCart();
