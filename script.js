@@ -134,7 +134,7 @@ function addToCart(gameId){
         cart.push({...game, qty:1});
     }
     renderCart();
-    alert(`${gameToAdd.title} Ajoute au panier `);
+    alert(`${game.title} Ajoute au panier !`);
 
     
 }
