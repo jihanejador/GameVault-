@@ -57,6 +57,10 @@ const games = [
 ];
 let cart = [];
 
+const cartPage= document.getElementById('cart-page');
+const closeCart = document.getElementById('closeCart');
+const cartBtn = document.querySelector('header button');
+
 const gameContainer = document.getElementById('game-container');
 
 
