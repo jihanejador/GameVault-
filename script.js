@@ -161,6 +161,7 @@ function renderCart(){
                 <button onclick="updateQty(${item.id}, -1)" class="bg-gray-100 px-3 py-1 rounded-lg font-bold">-</button>
                 <span class="font-bold w-6 text-center border border-black rounded">${item.qty}</span>
                 <button onclick="updateQty(${item.id}, 1)" class="bg-gray-100 px-3 py-1 rounded-lg font-bold">+</button>
+                <button onclick="removeFromCart(${item.id})" class="text-red-500 ml-4">🗑️</button>
             </div>
         </div>
         `;
