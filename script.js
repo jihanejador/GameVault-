@@ -147,6 +147,21 @@ function renderCart(){
 
     cart.forEach(item =>{
         total += item.price * item.qty;
-        
-    })
+        cartItems.innerHTML +=`
+        <div class="flex items-center justify-between border-b pb-4">
+            <div class="flex items-center gap-4">
+                <img src="${item.image}" class="w-16 h-16 rounded-xl object-cover">
+                <div>
+                    <h4 class="font-bold text-gray-800">${item.title}</h4>
+                    <p class="text-blue-600 font-bold">${item.price}$</p>
+                </div>
+            </div>
+            <div class="flex items-center gap-3">
+                <button onclick="updateQty(${item.id}, -1)" class="bg-gray-100 px-3 py-1 rounded-lg font-bold">-</button>
+                <span class="font-bold w-6 text-center border border-black rounded">${item.qty}</span>
+                <button onclick="updateQty(${item.id}, 1)" class="bg-gray-100 px-3 py-1 rounded-lg font-bold">+</button>
+            </div>
+        </div>
+        `;
+    });
 }
