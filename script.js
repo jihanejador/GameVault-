@@ -176,6 +176,7 @@ function updateQty(id,change){
         }
     }
     renderCart();
+    saveCart();
 }
 function saveCart(){
     localStorage.setItem('gameCart', JSON.stringify(cart));
