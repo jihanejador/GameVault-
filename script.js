@@ -138,3 +138,7 @@ function addToCart(gameId){
 
     
 }
+
+function renderCart(){
+    
+}
