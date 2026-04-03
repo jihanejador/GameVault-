@@ -178,5 +178,12 @@ function updateQty(id,change){
 }
 function saveCart(){
     localStorage.setItem('gameCart', JSON.stringify(cart));
-    
+
+}
+function loadCart(){
+    const saved = localStorage.getItem('gameCart');
+    if(saved){
+        cart = JSON.parse(saved);
+        renderCart();
+    }
 }
