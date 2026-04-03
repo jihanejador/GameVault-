@@ -164,4 +164,5 @@ function renderCart(){
         </div>
         `;
     });
+    totalPariceElement.textContent = total.toFixed(2);
 }
