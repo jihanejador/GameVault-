@@ -63,6 +63,8 @@ const cartBtn = document.querySelector('header button');
 
 const gameContainer = document.getElementById('game-container');
 
+document.querySelector('.bg-blue-800').addEventListener('click',checkout);
+
 
 function displayGames(gamesToShow) {
     
