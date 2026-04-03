@@ -65,12 +65,30 @@
         </main>
         <div id="cart-page" class="hidden fixed inset-0 bg-white z-50 p-8 overflow-y-auto">
             <div class="max-w-2xl mx-auto">
-                <button id="closeCart" class="text-3xl mb-6 font-bold">&larr;</button>
-                <h2 class="text-3xl font-black nb-8"">Votre Panier</h2>
-                <div id="cart-items" class="space-y-6"></div>
-                <div class="mt-10 border-t pt-6">
-                    <h3 class="text-2xl font-bold">Total : $<span id="total-price">0.00</span></h3>
-                    <button class="w-full mt-4 bg-custom-blue text-white py-4 rounded-2xl font-bold">Commander</button>
+                <div class="flex justify-between items-center mb-6">
+                    <button id="closeCart" class="text-3xl font-bold">&larr;</button>
+                    <h1 class="text-blue-700 font-black text-2xl">Game<span
+                            class="text-blue-300 font-normal">Store</span></h1>
+                </div>
+
+                <div class="relative mb-8">
+                    <input type="text" placeholder="search......."
+                        class="w-full bg-indigo-100 rounded-2xl py-3 px-6 outline-none text-gray-500">
+                    <span class="absolute right-5 top-3 opacity-30"></span>
+                </div>
+
+                <h2 class="text-2xl font-black mb-6 italic italic uppercase">Votre Panier</h2>
+
+                <div id="cart-items" class="space-y-6">
+                </div>
+
+                <div class="fixed bottom-0 left-0 right-0 p-6 bg-indigo-300 rounded-t-[2rem]">
+                    <div class="max-w-2xl mx-auto flex justify-between items-center">
+                        <h3 class="text-white text-xl font-bold italic">Total : $ <span id="total-price">0.00</span>
+                        </h3>
+                        <button
+                            class="bg-blue-800 text-white px-8 py-2 rounded-full font-bold uppercase text-xs">Commander</button>
+                    </div>
                 </div>
             </div>
         </div>
