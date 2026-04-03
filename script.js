@@ -195,4 +195,16 @@ function removeFromCart(id){
     renderCart();
     saveCart();
 }
+
+function checkout(){
+    if (cart.length === 0){
+        alert("Votre panier est vide ! ");
+        return;
+    }
+    alert("Commande reussie ! Merci pour votre achat.");
+    cart=[];
+    saveCart();
+    renderCart();
+    document.getElementById('cart-page').classList.add('hidden');
+}
 loadCart();
