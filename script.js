@@ -189,3 +189,4 @@ function loadCart(){
         renderCart();
     }
 }
+loadCart();
