@@ -143,5 +143,10 @@ function renderCart(){
     const cartItems = document.getElementById('cart-items');
     const totalPariceElement = document.getElementById('total-price');
     cartItems.innerHTML="";
-    
+    let total = 0;
+
+    cart.forEach(item =>{
+        total += item.price * item.qty;
+        
+    })
 }
