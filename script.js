@@ -166,3 +166,13 @@ function renderCart(){
     });
     totalPariceElement.textContent = total.toFixed(2);
 }
+function updateQty(id,change){
+    const item = cart.find(i => i.id === id);
+    if(item){
+        item.qty +=change;
+        if (item.qty <= 0){
+            cart = cart.filter(i=>i.id !== id);
+        }
+    }
+    renderCart();
+}
