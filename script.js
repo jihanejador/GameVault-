@@ -140,5 +140,8 @@ function addToCart(gameId){
 }
 
 function renderCart(){
+    const cartItems = document.getElementById('cart-items');
+    const totalPariceElement = document.getElementById('total-price');
+    cartItems.innerHTML="";
     
 }
