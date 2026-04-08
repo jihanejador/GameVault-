@@ -226,5 +226,6 @@ function applyPromo() {
         }
 
     });
+    renderCart(applyPromo);
 
 }
