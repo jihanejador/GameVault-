@@ -210,3 +210,16 @@ function checkout(){
     document.getElementById('cart-page').classList.add('hidden');
 }
 loadCart();
+const inputPromo = document.getElementById("cart");
+const ButtonPromo = document.getElementById("btn-color");
+
+function applyPromo() {
+
+    inputPromo.addEventListener('input',(e)=>{
+        if(e==="GAMER20"){
+            let NewTotal = totalPariceElement - 0.20;
+            ButtonPromo.style='green';
+        }
+    })
+
+}
